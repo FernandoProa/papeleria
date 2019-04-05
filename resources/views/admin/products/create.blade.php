@@ -12,8 +12,6 @@
 
                 <div class="section">
                     <h2 class="title" text-center>Registrar nuevo producto</h2>
-
-                <!-- Esta seccion muestra cualquier posible error en un mensaje de advertencia -->
                 @if ($errors->any())
                 <div class="alert alert-danger">
                     <ul>
@@ -23,7 +21,6 @@
                     </ul>
                 </div>
                 @endif
-                <!-- formulario de registro de productos -->
                <form method="post" action="{{ url('/admin/products') }}">
                    {{ csrf_field()}}
 
@@ -57,7 +54,7 @@
             </div>
 
         </div>
-        
+
         @include('includes.footer')
 
 @endsection
