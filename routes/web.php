@@ -7,6 +7,13 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/products/{id}','ProductController@show');
+Route::get('/sitemap', function () {
+    return view('sitemap');
+});
+Route::get('/contact', function () {
+    return view('Contacto');
+});
+
 Route::post('/cart','CartDetailController@store');
 Route::delete('/cart','CartDetailController@destroy');
 Route::post('/order','CartController@update');

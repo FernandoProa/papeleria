@@ -105,7 +105,7 @@
                     </div>
 
                 </div>
-
+			</div>
 
                 <div class="section landing-section">
                     <div class="row">
@@ -117,25 +117,25 @@
                                     <div class="col-md-6">
                                         <div class="form-group label-floating">
                                             <label class="control-label">Ingresa tu nombre</label>
-                                            <input type="email" class="form-control">
+                                            <input type="email" class="form-control" required>
                                         </div>
                                     </div>
                                     <div class="col-md-6">
                                         <div class="form-group label-floating">
                                             <label class="control-label">Ingresa tu correo electrónico</label>
-                                            <input type="email" class="form-control">
+                                            <input type="email" class="form-control" required>
                                         </div>
                                     </div>
                                 </div>
 
                                 <div class="form-group label-floating">
                                     <label class="control-label">Ingresa aquí tu mensaje</label>
-                                    <textarea class="form-control" rows="4"></textarea>
+                                    <textarea class="form-control" rows="4" required></textarea>
                                 </div>
 
                                 <div class="row">
                                     <div class="col-md-4 col-md-offset-4 text-center">
-                                        <button class="btn btn-primary btn-raised">
+                                        <button class="btn btn-primary btn-raised" >
                                             ¡Enviar!
                                         </button>
                                     </div>
