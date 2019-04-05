@@ -1,7 +1,7 @@
 @extends('layouts.app')
 @section('body-class', 'product-page')
 @section('content')
- <div class="header header-filter" style="background-image: url('https://images.unsplash.com/photo-1423655156442-ccc11daa4e99?crop=entropy&dpr=2&fit=crop&fm=jpg&h=750&ixjsv=2.1.0&ixlib=rb-0.3.5&q=50&w=1450');">
+ <div class="header header-filter" style="background-image: url('https://i.ytimg.com/vi/rYdo8zwY0HM/maxresdefault.jpg');">
          
         </div>
 
@@ -28,13 +28,13 @@
                     <div class="col-sm-6">
                         <div class="form-group label-floating">
                          <label class="control-label">Nombre del producto</label>
-                            <input type="text" class="form-control" name="name" value="{{ old('name')}}">
+                            <input type="text" class="form-control" name="name" value="{{ old('name')}}" required>
                         </div>
                     </div>
                     <div class="col-sm-6">
                     <div class="form-group label-floating">
                     <label class="control-label">Precio del producto</label>
-                    <input type="number" class="form-control" name="price" value="{{ old('price')}}">
+                    <input type="number" class="form-control" name="price" value="{{ old('price')}}" required>
                     </div>
                     </div>
                 </div>
@@ -42,7 +42,7 @@
 
                 <div class="form-group label-floating">
                     <label class="control-label">Descripción corta</label>
-                    <input type="text" class="form-control" name="description" value="{{ old('description')}}">
+                    <input type="text" class="form-control" name="description" value="{{ old('description')}}" required>
                  </div>    
                  
                  <textarea class="form-control" placeholder="Descripción extensa del producto" rows="5" name="long_description" placeholder="Descripción extensa del producto">{{old('long_description')}}</textarea>
