@@ -44,16 +44,8 @@ class Handler extends ExceptionHandler
      * @param  \Exception  $exception
      * @return \Illuminate\Http\Response
      */
-    public function render($request, Exception $e)
-
+    public function render($request, Exception $exception)
     {
-
-        if ($e->getStatusCode() == 404) 
-        {
-            return response()->view('sitemap', [], 404);
-        }
- 
-        
-        return parent::render($request, $e);
+        return parent::render($request, $exception);
     }
 }

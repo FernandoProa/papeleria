@@ -1,7 +1,10 @@
 <?php
 
 Route::get('/', 'TestController@welcome');
+
+
 Auth::routes();
+
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/products/{id}','ProductController@show');
 Route::get('/sitemap', function () {
