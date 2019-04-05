@@ -28,12 +28,12 @@
                                             </a>
                                         </li>
                                         
-                                        <li>
+                                        <!-- <li>
                                             <a href="#tasks" role="tab" data-toggle="tab">
                                                 <i class="material-icons">list</i>
                                                 Pedidos realizados
                                             </a>
-                                        </li>
+                                        </li> -->
                                     </ul>
                                     <hr>
                                     <p>Tu carrito tiene {{ auth()->user()->cart->details->count()}} productos.</p>

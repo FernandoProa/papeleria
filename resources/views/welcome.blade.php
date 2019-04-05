@@ -1,6 +1,5 @@
 @extends('layouts.app')
 @section('body-class', 'landing-page')
-
 @section('styles')
 <style>
     .team .row .col-md-4{
@@ -28,10 +27,7 @@
                     <div class="col-md-6">
                         <h1 class="title">Papeleria y Regalos Sandy</h1>
                         <h4>Los mejores prductos, ahora más cerca de ti...</h4>
-                        <br />
-                        <!-- <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" class="btn btn-danger btn-raised btn-lg">
-                            <i class="fa fa-play"></i> ¿Cómo funciona?
-                        </a> -->
+                        <br/>
                     </div>
                 </div>
             </div>
@@ -135,7 +131,7 @@
 
                                 <div class="row">
                                     <div class="col-md-4 col-md-offset-4 text-center">
-                                        <button class="btn btn-primary btn-raised" >
+                                        <button class="btn btn-primary btn-raised">
                                             ¡Enviar!
                                         </button>
                                     </div>
@@ -143,11 +139,8 @@
                             </form>
                         </div>
                     </div>
-
                 </div>
             </div>
-
         </div>
-
         @include('includes.footer')
 @endsection

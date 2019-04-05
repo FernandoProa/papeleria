@@ -36,14 +36,14 @@
                                             <td>{{ $product->description}}</td>
                                             <td>{{ $product->category ? $product->category->name : 'General'}}</td>
                                             <td class="text-right">$ {{ $product->price}}</td>
-                                            <td class="td-actions text-right">
+                                            <td class="td-actions">
                                                 
                                                 <form method="post" action="{{url('/admin/products/'.$product->id.'/delete')}}">
                                                     {{ csrf_field() }}
                                                     {{ method_field('DELETE') }}
                                                     
                                                     <a type="button" rel="tooltip" title="Ver producto" class="btn btn-info btn-simple btn-xs">
-                                                    <i class="fa fa-info"></i>
+                                                    <i class="fa fa-info">
                                                     </a>
                                                     <a href="{{url('/admin/products/'.$product->id.'/edit')}}" rel="tooltip" title="Ver producto" class="btn btn-info btn-simple btn-xs" target="_blank">
                                                     <i class="fa fa-edit"></i>
@@ -58,6 +58,7 @@
                                                
                                             </td>
                                         </tr>
+
                                         @endforeach
                                     </tbody>
                                 </table>
