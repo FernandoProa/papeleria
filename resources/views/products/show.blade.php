@@ -4,7 +4,7 @@
 @section('body-class', 'profile-page')
 @section('content')
  
-    <div class="header header-filter" style="background-image: url('/img/examples/city.jpg');"></div>
+    <div class="header header-filter" style="background-image: url(''https://www.elsoldetoluca.com.mx/finanzas/5pds0j-papeleria/ALTERNATES/LANDSCAPE_1140/papeler%C3%ADa');"></div>
 
     <div class="main main-raised">
             <div class="profile-content">
@@ -16,7 +16,7 @@
                             </div>
                             <div class="name">
                                 <h3 class="title">{{$product->name}}</h3>
-                                <h6>{{$product->category->name}}r</h6>
+                               
                             </div>
                                @if (session('notification'))
                                     <div class="alert alert-success" role="alert">
@@ -26,12 +26,32 @@
                         </div>
                     </div>
                     <div class="description text-center">
-                        <p>A{{$product->long_description}} </p>
+                        <p>{{$product->long_description}} </p>
                     </div>
                     <div class="text-center">
-                        <button class="btn btn-primary btn-round" data-toggle="modal" data-target="#modalAddToCart">
-                        <i class="material-icons">add</i> Añadir al Carrito
-                    </button>
+                        @guest
+                       
+                        @if (Route::has('register'))
+                            <div class="alert alert-info">
+                                <div class="container-fluid">
+                                  <div class="alert-icon">
+                                    <i class="material-icons">info_outline</i>
+                                  </div>
+                                  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                    <span aria-hidden="true"><i class="material-icons">clear</i></span>
+                                  </button>
+                                  <b>¡Aviso!</b>
+                                  <p>Registrate o inicia sesión para añadir productos al carrtio :)</p>
+                                </div>
+                            </div>
+                            @endif
+                        @else
+                       
+                             <button class="btn btn-primary btn-round" data-toggle="modal" data-target="#modalAddToCart">
+                            <i class="material-icons">add</i> Añadir al Carrito
+                            </button>
+
+                    @endguest
                     </div>                  
 
 

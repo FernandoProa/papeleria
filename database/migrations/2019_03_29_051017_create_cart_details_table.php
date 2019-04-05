@@ -14,7 +14,7 @@ class CreateCartDetailsTable extends Migration
     public function up()
     {
         Schema::create('cart_details', function (Blueprint $table) {
-            $table->bigIncrements('id');
+            $table->Increments('id');
            
 
 

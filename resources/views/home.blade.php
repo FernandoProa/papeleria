@@ -14,11 +14,6 @@
 
                 <div class="section">
                     <h2 class="title text-center">Dashboard</h2>
-                                    
-                    
-
-
-                                    
                                         @if (session('notification'))
                                             <div class="alert alert-success" role="alert">
                                                 {{ session('notification') }}
@@ -40,13 +35,8 @@
                                             </a>
                                         </li>
                                     </ul>
-                                                
-                                    
-                                        
                                     <hr>
                                     <p>Tu carrito tiene {{ auth()->user()->cart->details->count()}} productos.</p>
-
-
                                     <table class="table">
                                    <thead>
                                         <tr>
@@ -70,9 +60,6 @@
 
                                                 </a>
                                             </td>
-
-                                            
-                                           
                                             <td class="text-left">$; {{ $detail->product->price}}</td>
                                             <td>{{$detail->quantity}}</td>
                                             <td>$ {{$detail->quantity * $detail->product->price }}</td>

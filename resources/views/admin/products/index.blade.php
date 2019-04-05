@@ -35,11 +35,12 @@
                                             <td>{{ $product->name}}</td>
                                             <td>{{ $product->description}}</td>
                                             <td>{{ $product->category ? $product->category->name : 'General'}}</td>
-                                            <td class="text-right">&euro; {{ $product->price}}</td>
+                                            <td class="text-right">$ {{ $product->price}}</td>
                                             <td class="td-actions text-right">
                                                 
                                                 <form method="post" action="{{url('/admin/products/'.$product->id.'/delete')}}">
                                                     {{ csrf_field() }}
+                                                    {{ method_field('DELETE') }}
                                                     <a type="button" rel="tooltip" title="Ver producto" class="btn btn-info btn-simple btn-xs">
                                                     <i class="fa fa-info"></i>
                                                     </a>

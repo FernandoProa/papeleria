@@ -11,17 +11,6 @@
                         @csrf
                         <div class="header header-primary text-center">
                             <h4>Registro de usuario</h4>
-                            <!-- <div class="social-line">
-                                <a href="#pablo" class="btn btn-simple btn-just-icon">
-                                    <i class="fa fa-facebook-square"></i>
-                                </a>
-                                <a href="#pablo" class="btn btn-simple btn-just-icon">
-                                    <i class="fa fa-twitter"></i>
-                                </a>
-                                <a href="#pablo" class="btn btn-simple btn-just-icon">
-                                    <i class="fa fa-google-plus"></i>
-                                </a>
-                            </div> -->
                         </div>
                         <p class="text-divider">Completa tus datos</p>
                         <div class="content">
@@ -30,7 +19,7 @@
                                 <i class="material-icons">face</i>
                                 </span>
                                 <input type="text" class="form-control" placeholder="Nombre..." name="name" value="{{ old('name') }}" required autofocus>
-                             </div> 
+                            </div> 
 
 
                             <div class="input-group">
@@ -59,13 +48,7 @@
                         </div>
                         <div class="footer text-center">
                             <button type="submit" class="btn btn-simple btn-primary btn-lg">Confirmar registro</button>
-                        </div>
-
-                       <!-- <a class="btn btn-link" href="{{ route('password.request') }}">
-                                        {{ __('Forgot Your Password?') }}
-                                    </a>-->
                     </form>
-
                 </div>
             </div>
         </div>
