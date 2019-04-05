@@ -16,7 +16,7 @@ class ProductController extends Controller
     }
     public function store(Request $request){
 
-        //validacion de datos
+        //validacion de datos y mensajes personalizados para cualquier posible error durante el guardado
         $messages = [
             'name.required' => 'Es necesario ingresar un nombre para el producto',
             'name.min' => 'El nombre debe contener un minimo de 3 caracteres',
@@ -36,7 +36,7 @@ class ProductController extends Controller
 
 
     	//registrar el nuevo producto en la bd
-    	//dd($request -> all());
+    	
     	$product = new Product();
     	$product->name = $request->input('name'); 
     	$product->description = $request->input('description'); 
@@ -71,23 +71,22 @@ class ProductController extends Controller
         ];
         $this->validate($request, $rules,$messages);
 
-        //registrar el nuevo producto en la bd
-        //dd($request -> all());
+        //actualizar un producto en la bd
+        
         $product = Product::find($id);
         $product->name = $request->input('name'); 
         $product->description = $request->input('description'); 
         $product->price = $request->input('price'); 
         $product->long_description = $request->input('long_description'); 
-        $product->save();//UPDATE
+        $product->save();//Guardar
 
         return redirect('/admin/products');
     }
 
        public function destroy($id){
-        //registrar el nuevo producto en la bd
-        //dd($request -> all());
+        //eliminar el producto de la bd
         $product = Product::find($id);
-        $product->delete();//UPDATE
+        $product->delete();//DELETE
 
         return back();
     }
